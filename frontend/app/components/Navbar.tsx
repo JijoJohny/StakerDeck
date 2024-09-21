@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <>
       <div className="navbar-logo">
         <Image src="/logo.png" alt="" width={50} height={50} />
         <span className="logo-text">StakeDeck</span>
@@ -20,11 +20,7 @@ const Navbar = () => {
           <Link href="/luckydraw">Lucky Draw</Link>
         </li>
       </ul>
-      <div className="navbar-buttons">
-        <button className="connect-wallet">Connect Wallet</button>
-        <button className="buy">Buy</button>
-      </div>
-    </nav>
+      </>
   );
 };
 

@@ -26,8 +26,7 @@ const Timeline = (props: any) => {
   ];
 
   return (
-    <div className="timeline-container">
-        <div className='left'>
+    <>
         {steps.map((step, index) => (
         <div key={step.id} className="timeline-item">
           <div className={`timeline-number ${index <= props.in ? 'active' : ''}`}>
@@ -38,15 +37,11 @@ const Timeline = (props: any) => {
             <p>{step.description}</p>
           </div>
         </div>
+       
       ))}
-        </div>
-      <div className='right'>
-        
-        <DepositCard/>
-
-      </div>
+         </>
       
-    </div>
+      
   );
 };
 
