@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from "axios";
 
 
 const LoginCard = ({ onClose }) => {
@@ -7,8 +8,35 @@ const LoginCard = ({ onClose }) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+ 
+  const [error, setError] = useState('');
+  const [login, setLogin] = useState(false);
+  // const [name, setName] = useState('');
+  const [registered, setRegistered] = useState(false);
+  const loginfn = async (e) => {
+    e.preventDefault();
+    try {
+      
+      // const storedToken = localStorage.getItem('token');
+      
+      const response = await axios.post('http://localhost:3000/api/users/login', {
+        "email":email,
+        "password":password
+      });
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      console.log(token);
+      
+      setLogin(true);
+    } catch (error) {
+      console.error('Login failed:', error);
+      setError('Login failed. Please try again later.');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     if (isLogin) {
       // Call backend API for login
       console.log('Logging in with:', { email, password });
@@ -30,7 +58,11 @@ const LoginCard = ({ onClose }) => {
 
         <h2>{isLogin ? 'Login' : 'Register'}</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={()=>{
+          loginfn;
+          handleSubmit;
+
+        }}>
           <div className="input-container">
             <label>Email:</label>
             <input 
