@@ -1,0 +1,17 @@
+[package]
+name = "DocumentsManagement"
+version = "1.0.0"
+authors = []
+
+[addresses]
+HashSign = "0x758a2c62ec55085851472daffc07c6bed520c79ea43899cf59721d2dad45b528"
+aptos_framework = "0x1"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
+
