@@ -1,8 +1,8 @@
 "use client";
-import DepositCard from "./components/DepositCard";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/SideBar";
-import Timeline from "./components/TimeLine";
+import DepositCard from "../components/DepositCard";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/SideBar";
+import Timeline from "../components/TimeLine";
 
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
       
       <main className="bg-[#0c0a09]">
         {/* <Sidebar/> */}
-        <Timeline in={0}/>
+        <Timeline in={1} />
         
         {/* Main content of the page */}
       </main>

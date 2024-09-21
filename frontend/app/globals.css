@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
@@ -20,8 +9,271 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .logo-text {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.connect-wallet {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.connect-wallet:hover, .buy:hover {
+  opacity: 0.8;
+}
+
+/* .navbar {
+  background-color: #333;
+  padding: 10px;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ccc;
+} */
+
+
+
+.sidebar {
+  background-color: #333;
+  padding: 20px;
+  width: 25%;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background-color: #eee;
+}
+
+
+
+.timeline-container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.timeline-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.timeline-number.active {
+  background-color: #007bff;
+  transition: background-color 1s ease-in-out 0.5s, transform 0.3s ease-in-out 0.5s;
+}
+
+.timeline-content {
+ 
+ 
+}
+.left,.right{
+  flex:1;
+  margin: 0px 75px 0px 75px;
+  align-content: center;
+  /* margin-top: ; */
+}
+.left{
+
+}
+.right{
+  
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 40px;
+  width: 2px;
+  height: 100%;
+  background-color: #333;
+}
+
+.timeline-item:last-child:before {
+  height: 0;
+}
+
+
+
+.deposit-card {
+  background-color: #1F1F1F;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.deposit-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deposit-card p {
+  color: #a0aec0;
+  margin-bottom: 20px;
+}
+
+.amount-input label {
+  display: block;
+  margin-bottom: 10px;
+  color: #a0aec0;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #2C2C2C;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.input-group input {
+  background: none;
+  border: none;
+  color: white;
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-group .currency {
+  color: #a0aec0;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.deposit-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.deposit-btn:hover {
+  opacity: 0.9;
+}
+
+
+
