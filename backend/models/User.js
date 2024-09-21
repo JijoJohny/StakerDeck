@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
         publicKey: { type: String, required: true },
         secretKey: { type: String, required: true } // Store securely
     },
-    balance: { type: Number, default: 0 } // Track deposits
+    balance: { type: Number, default: 0 },
+     usdtBalance: { type: Number, default: 0 }
 });
 
 module.exports = mongoose.model('User', userSchema);
