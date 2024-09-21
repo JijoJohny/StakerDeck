@@ -8,7 +8,11 @@ const userSchema = new mongoose.Schema({
         secretKey: { type: String, required: true } // Store securely
     },
     balance: { type: Number, default: 0 },
-     usdtBalance: { type: Number, default: 0 }
+     usdtBalance: { type: Number, default: 0 },
+     stakedAmount: { type: Number, default: 0 }, // Amount staked
+    stakingDuration: { type: Number, default: 0 }, // Staking duration in days
+    stakingReward: { type: Number, default: 0 }, // Reward earned from staking
+    stakingStartDate: { type: Date },
 });
 
 module.exports = mongoose.model('User', userSchema);
